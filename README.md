@@ -14,10 +14,9 @@
 
 ...
 
-## TODO
-
+## todo list
 ...
 
-## License
+## license
 
 [MIT](./LICENSE)
