@@ -7,11 +7,17 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v4
+    
     - name: install docker compose
       run: sudo apt -y update && sudo apt -y install docker-compose
+    
     - name: build android app file
       run: . ./env/apk.sh
-    - name: list files
-      run: find -name "*.apk"
+
+    - name: Create release
+      run: gh release create v$( date +%Y%m%d%H%M ) ./src/app/build/app/outputs/flutter-apk/app-release.apk
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
