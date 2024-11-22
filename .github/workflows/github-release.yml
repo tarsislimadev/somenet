@@ -1,8 +1,10 @@
-name: Github Release
+name: GitHub release
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - 'main'
+  workflow_dispatch:
 
 jobs:
   build:
