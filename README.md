@@ -8,18 +8,6 @@ A net tool to Lunix-based systems
 
 [Donate](https://link.mercadopago.com.br/brtmvdl) - [Telegram](#) - [Discord](#)
 
-## how to install
-
-...
-
-## how to use
-
-...
-
-## todo list
-
-...
-
 ## license
 
 [MIT](./LICENSE)
