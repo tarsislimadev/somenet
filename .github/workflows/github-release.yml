@@ -18,4 +18,4 @@ jobs:
       run: . ./env/apk.sh
 
     - name: copy dist file
-      run: docker run --rm --net host -v $( pwd ):/dist -w /dist somenet-app cp -rfv /app/build/app/outputs/flutter-apk/app-release.apk ./app-release.apk
+      run: docker-compose exec app cp -rfv ./build/app/outputs/flutter-apk/app-release.apk ./app-release.apk
