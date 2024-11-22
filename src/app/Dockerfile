@@ -1,4 +1,4 @@
-FROM gradle:jdk11-jammy
+FROM gradle:jdk17-jammy
 
 WORKDIR /app
 
