@@ -13,7 +13,5 @@ jobs:
       run: sudo apt -y update && sudo apt -y install docker-compose
     - name: build android app file
       run: . ./env/apk.sh
-    - name: copy dist file
-      run: docker-compose exec app cp -rfv $( find -name "*.apk" ) . 
     - name: list files
-      run: ls "*.apk"
+      run: find -name "*.apk"
