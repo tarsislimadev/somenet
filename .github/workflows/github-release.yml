@@ -11,11 +11,11 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: build android app file
-      run: . ./env/apk.sh
-
     - name: install docker compose
       run: sudo apt -y update && sudo apt -y install docker-compose
+
+    - name: build android app file
+      run: . ./env/apk.sh
 
     - name: copty dist file
       run: docker run --rm --net host -v $(PWD):/dist -w /dist  somenet-app  cp -rfv /app/build/app/outputs/flutter-apk/app-release.apk app-release.apk
