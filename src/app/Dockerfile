@@ -1,7 +1,7 @@
-FROM tmvdl/c:alpine
+FROM gradle:jdk11-jammy
 
 WORKDIR /app
 
 COPY . .
 
-CMD echo
+CMD java -version
