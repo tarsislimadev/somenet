@@ -16,4 +16,4 @@ jobs:
       run: . ./env/apk.sh
 
     - name: copty dist file
-      run: docker run --rm --net host -v $(PWD):/dist -w /dist  app  cp -rfv /app/build/app/outputs/flutter-apk/app-release.apk app-release.apk
+      run: docker run --rm --net host -v $(PWD):/dist -w /dist  somenet-app  cp -rfv /app/build/app/outputs/flutter-apk/app-release.apk app-release.apk
