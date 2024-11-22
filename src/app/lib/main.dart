@@ -50,7 +50,7 @@ class _NetworkListScreenState extends State<NetworkListScreen> {
               itemBuilder: (context, index) {
                 return ListTile(
                   title: Text(_networks[index].ssid),
-                  subtitle: Text(_networks[index].bssid),
+                  subtitle: "", // Text(_networks[index].bssid),
                 );
               },
             ),
