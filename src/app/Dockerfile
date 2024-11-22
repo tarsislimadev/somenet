@@ -1,7 +1,7 @@
-FROM gradle:jdk17-jammy
+FROM tmvdl/dart:flutter
 
 WORKDIR /app
 
 COPY . .
 
-CMD java -version
+CMD flutter --version
