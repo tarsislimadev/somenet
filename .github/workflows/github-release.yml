@@ -7,15 +7,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
     steps:
     - uses: actions/checkout@v4
-
     - name: install docker compose
       run: sudo apt -y update && sudo apt -y install docker-compose
-
     - name: build android app file
       run: . ./env/apk.sh
-
     - name: copy dist file
-      run: docker-compose exec app cp -rfv ./build/app/outputs/flutter-apk/app-release.apk ./app-release.apk
+      run: docker-compose exec app cp -rfv $( find -name "*.apk" ) . 
+    - name: list files
+      run: ls "*.apk"
