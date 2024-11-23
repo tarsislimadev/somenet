@@ -37,7 +37,7 @@ class _NetworkListScreenState extends State<NetworkListScreen> {
     return Scaffold(
       appBar: AppBar(title: Text('Networks List')),
       body: _networks.isEmpty
-          ? Center(child: CircularProgressIndicator())
+          ? Center(child: Text("none"))
           : ListView.builder(
               itemCount: _networks.length,
               itemBuilder: (context, index) => ListTile(title: Text(_networks[index].ssid))
