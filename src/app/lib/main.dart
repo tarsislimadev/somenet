@@ -61,7 +61,7 @@ class _NetworkListScreenState extends State<NetworkListScreen> {
           : ListView.builder(
               itemCount: _networks.length,
               itemBuilder: (context, index) => ElevatedButton(
-                onPressed: () => await _createHotspot(_networks[index].ssid),
+                onPressed: () => _createHotspot(_networks[index].ssid),
                 child: Text('Create Hotspot' + _networks[index].ssid),
               ),
           )
